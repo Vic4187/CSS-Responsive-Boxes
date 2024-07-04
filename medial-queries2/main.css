@@ -5,62 +5,86 @@
 
 body {
   background: blanchedalmond;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100vh;
   margin: 0;
+  text-align: center;
 }
  
 .container {
   display: flex;
-  flex-flow: wrap;
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
 }
-.a {
-  width: 150px;
-  height: 40px;
-  background-color: #3498db;
-  border: 2px solid #2980b9;
-  text-align: center;
-  margin: 5px;
-}
- 
-.b {
-  width: 150px;
-  height: 100px;
-  background-color: #3498db;
-  border: 2px solid #2980b9;  
-  text-align: center;
-  min-height: 60ch;
+
+main {
+  display: flex;
+  min-height: 70vh;
+  flex-wrap: wrap;
+  flex-direction: column;
   flex-grow: 5;
-  margin: 5px;
+  align-items: center;
 }
- 
-.c {
-  width: 150px;
-  height: 40px;
+
+.sectionOne {
+  display: flex;
+  min-height: 20vh;
+  width: 95%;
+  flex-grow: 3;
+  justify-content: space-around;
+}
+
+.sectionOne div {
   background-color: #3498db;
   border: 2px solid #2980b9;
-  text-align: center;
   margin: 5px;
+  flex: 100%;
 }
-.a, .c {
+
+.sectionTwo  {
+  display: flex;
+  min-height: 20vh;
+  width: 95%;
   flex-grow: 1;
+  justify-content: space-around;
 }
+
+.sectionTwo div {
+  background-color: #3498db;
+  border: 2px solid #2980b9;
+  margin: 5px;
+  flex: 33%;
+}
+
+header, footer {
+  display: flex;
+  flex-grow: 1;
+  margin: 5px;
+  text-align: center;
+}
+
+header div, footer div {
+  background-color: #3498db;
+  border: 2px solid #2980b9;
+  margin: 5px;
+  flex: 33%;
+}
+
 @media (min-width: 600px) {
   .container {
-      flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-  .a {
-      max-width: 100%;
+
+  header {
+    width: 100%;
   }
-  .b {
-    max-width: 80%;
+
+  main {
+    flex: 65%;
+    min-height: 75vh;
   }
-  .c {
-    max-width: 20%;
+
+  .sectionTwo {
+    min-height: 25vh;
   }
 }

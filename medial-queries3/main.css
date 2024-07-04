@@ -5,62 +5,76 @@
 
 body {
   background: blanchedalmond;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100vh;
   margin: 0;
+  text-align: center;
 }
- 
+
 .container {
   display: flex;
-  flex-flow: wrap;
   min-height: 100vh;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
-.a {
-  width: 150px;
-  height: 40px;
+
+main {
+  display: flex;
+  min-height: 85vh;
+  flex-direction: column;
+}
+
+.sectionOne {
+  display: flex;
+  flex-grow: 2;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.sectionOne div {
   background-color: #3498db;
   border: 2px solid #2980b9;
-  text-align: center;
   margin: 5px;
+  flex: 25%;
 }
- 
-.b {
-  width: 150px;
-  height: 100px;
-  background-color: #3498db;
-  border: 2px solid #2980b9;  
-  text-align: center;
-  min-height: 60ch;
-  flex-grow: 5;
-  margin: 5px;
+
+.sectionTwo  {
+  display: flex;
+  min-height: 20vh;
+  flex-grow: 3;
+  justify-content: space-around;
 }
- 
-.c {
-  width: 150px;
-  height: 40px;
+
+.sectionTwo div {
   background-color: #3498db;
   border: 2px solid #2980b9;
-  text-align: center;
   margin: 5px;
+  flex: 33%;
 }
-.a, .c {
+
+header {
+  display: flex;
   flex-grow: 1;
+  margin: 5px;
+  text-align: center;
 }
+
+header div {
+  background-color: #3498db;
+  border: 2px solid #2980b9;
+  margin: 5px;
+  flex: 33%;
+}
+
 @media (min-width: 600px) {
-  .container {
-      flex-direction: row;
+  main {
+    flex-direction: row;
   }
-  .a {
-      max-width: 100%;
+
+  .sectionOne {
+    flex: 70%;
   }
-  .b {
-    max-width: 80%;
-  }
-  .c {
-    max-width: 20%;
+
+  .sectionTwo {
+    flex: 20%;
   }
 }
